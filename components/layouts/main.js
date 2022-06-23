@@ -1,5 +1,6 @@
-const { Box, Container } = require('@chakra-ui/react')
-const { default: Head } = require('next/head')
+import Head from 'next/head'
+import Navbar from '../navbar'
+import { Box, Container } from '@chakra-ui/react'
 
 const Main = ({ children, router }) => {
   return (
@@ -8,6 +9,8 @@ const Main = ({ children, router }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <title>Sahajpal Singh Mahla - Homepage</title>
       </Head>
+
+      <Navbar path={router.asPath}></Navbar>
 
       <Container maxW="container.md" pt={14}>
         {children}
