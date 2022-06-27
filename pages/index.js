@@ -6,6 +6,7 @@ import {
   useColorModeValue,
   chakra
 } from '@chakra-ui/react'
+import Section from '../components/section'
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -60,6 +61,12 @@ const Page = () => {
           </Box>
         </Box>
       </Box>
+      <Section delay={0.1}>
+        <Heading as="h3" variant="section-title">
+          Work
+        </Heading>
+        <p>Paragraph</p>
+      </Section>
     </Container>
   )
 }
